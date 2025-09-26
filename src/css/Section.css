@@ -1,0 +1,12 @@
+.section {
+  padding: 2rem;
+}
+.section h2 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.card-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+}

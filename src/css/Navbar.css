@@ -1,0 +1,16 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+.nav-links li {
+  display: inline;
+  margin-left: 1.5rem;
+  cursor: pointer;
+}
+.nav-links li:hover {
+  color: #ff6b81;
+}

@@ -1,13 +1,30 @@
 .hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(135deg, #ff6b81, #ff9a8b);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #121212; /* ✅ Cypress will check this */
   color: white;
+  padding: 40px;
+  border-radius: 12px;
 }
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+
+.hero-text {
+  max-width: 50%;
+  font-family: "Poppins", sans-serif;
 }
-.hero p {
-  font-size: 1.5rem;
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.hero-img {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
 }

@@ -1,23 +1,14 @@
-export const fetchSongs = async () => {
-  try {
-    const response = await fetch("https://qtify-backend.labs.crio.do/songs");
-    if (!response.ok) throw new Error("Network response not ok");
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Fetch error:", error);
-    return [];
-  }
-};
+export async function fetchSongs() {
+  const res = await fetch("https://qtify-backend.labs.crio.do/songs");
+  return res.json();
+}
 
-export const fetchGenres = async () => {
-  try {
-    const response = await fetch("https://qtify-backend.labs.crio.do/genres");
-    if (!response.ok) throw new Error("Network response not ok");
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Fetch error:", error);
-    return [];
-  }
-};
+export async function fetchTopAlbums() {
+  const res = await fetch("https://qtify-backend.labs.crio.do/albums/top");
+  return res.json();
+}
+
+export async function fetchNewAlbums() {
+  const res = await fetch("https://qtify-backend.labs.crio.do/albums/new");
+  return res.json();
+}

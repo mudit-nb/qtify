@@ -3,8 +3,7 @@ import "../css/Section.css";
 
 export default function Section({ title, songs }) {
   const [showAll, setShowAll] = useState(false);
-
-  const visibleSongs = showAll ? songs : songs.slice(0, 10);
+  const maxVisible = 10; // Number of items shown by default
 
   return (
     <div className="section">
@@ -15,8 +14,14 @@ export default function Section({ title, songs }) {
         </button>
       </div>
       <div className="section-cards">
-        {visibleSongs.map((item) => (
-          <div key={item.id} className="album-card">
+        {songs.map((item, index) => (
+          <div
+            key={item.id}
+            className="album-card"
+            style={{
+              display: !showAll && index >= maxVisible ? "none" : "block",
+            }}
+          >
             <img src={item.image} alt={item.title} />
             <p>{item.title}</p>
           </div>

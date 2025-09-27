@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <img src="/logo.png" alt="logo" className="logo" />
-      <input type="text" placeholder="search" className="search-bar" />
+      <input type="text" placeholder="search a song" className="search-bar" />
 
       <button className="cta-btn">Give Feedback</button>
     </nav>
